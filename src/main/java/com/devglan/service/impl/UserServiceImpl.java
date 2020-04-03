@@ -55,6 +55,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
 	@Override
 	public User save(User user) {
+		
 		/* crypter le password */
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String hachedpassword = passwordEncoder.encode(user.getPassword());
